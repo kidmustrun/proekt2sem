@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    height: calc(100vh - 86px);
+    background: url(../img/main.jpg) no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    height: 50vh;
+    max-width: 50vw !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+}
+
+.content {
+    padding: 5% 10% !important;
+    margin-bottom: 40px;
+    word-break: break-word;
+}
+
+.content h2 {
+    margin-top: 5vh;
+}
+
+.content img {
+    width: 60vw;
+    margin-bottom: 5vh;
+}
