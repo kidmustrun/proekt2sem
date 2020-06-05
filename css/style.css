@@ -3,11 +3,17 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    width: 100% !important;
 }
 
 .hero {
     height: calc(100vh - 86px);
     background: url(../img/main.jpg) no-repeat;
+    background-size: cover;
+}
+
+.hero-cats {
+    background: url(../img/main-cats.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -17,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: #000;
+    color: #fff;
 }
 
 .content {
@@ -33,4 +39,41 @@ body {
 .content img {
     width: 60vw;
     margin-bottom: 5vh;
+}
+
+.form-styles {
+    width: 40vw;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.container {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.card {
+    display: flex !important;
+    width: 25vw;
+}
+
+@media screen and (max-width: 665px) {
+    form {
+        width: 100% !important;
+    }
+    .hero .container {
+        margin: 0;
+    }
+    .hero-text {
+        height: inherit;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text a {
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+    }
 }

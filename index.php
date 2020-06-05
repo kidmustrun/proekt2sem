@@ -13,7 +13,7 @@
 </head>
 <body>
 <header id="header" class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" style="height: 60px;"></a>
+        <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="logo" style="height: 60px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,20 +21,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Кто мы?</a>
+                    <a class="nav-link" href="index.php">Кто мы?</a>
                 </li>
                 <li class="nav-item dropdown show active">
                     <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Наши питомцы
                        </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item dark" href="#">Кошки</a>
-                        <a class="dropdown-item" href="#">Собаки</a>
-                        <a class="dropdown-item" href="#">Птицы</a>
+                        <a class="dropdown-item dark" href="pages/cats.php">Кошки</a>
+                        <a class="dropdown-item" href="pages/dogs.php">Собаки</a>
+                        <a class="dropdown-item" href="pages/birds.php">Птицы</a>
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="source/un2035.html">Конкурс рисунков</a>
+                    <a class="nav-link" href="#">Конкурс рисунков</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Наши контакты</a>
                 </li>
             </ul>
         </div>
@@ -49,7 +52,28 @@
     <div class="content container">
         <h1>Сообщество "Добрая лапа"</h1>
         <p>Вот уже 10 лет мы помогаем нашим маленьким друзьям обрести новый дом, заботу, и любовь! Спасибо, что Вы с нами!</p>
-    </div>
+        <h1>Кто мы?</h1>
+        <p>Сообщество "Добрая лапа" - это добровольная некоммерческая организация, помогающая бездомным животным обрести добрых хозяев. Все фотографии животных на сайте сделаны нашими волонтерами, которым мы доверяем работу по поиску. Будущий хозяин должен быть не младше 25 лет, с постоянным местом жилья и работы, а так же порядочным и добрым человеком. Все это гарантирует, что маленький хвостик попадет в добрые и любящие руки!</p>
+    <h1>Могу ли я чем-то помочь?</h1>
+    <p>Да! Ряды наших волонтеров всегда рады пополнению, кроме того, если Вы сами обнаружили бездомное животное, вы можете связаться с нами через <a href="#form">форму</a> и мы обязательно скоординируем Вас дальше!</p>
+    <h1>Кто такие волонтёры?</h1>
+    <p>Волонтёры - обычные люди, которые в свободное время занимаются поиском и пристраиванием бездомных животных. За счёт средств сообщества животные получают необходимый уход и лекарства, и поступают на руки хозяевам в здоровом виде. Стать волонтёром может любой желающий, прошедший отбор. Основные требования: возраст не младше 25 лет, постоянное жилье и доход, доброе и отзывчивое сердце. Работа волонтёра добровольная, за нее не платят деньги, но без этих ребят тысячи животных просто не смогут спастись!</p>
+    <a name="form"></a>
+    <h2>Присоединиться к "Доброй лапе"</h2>
+                <form class="form-styles bg-warning clearfix">
+                    <div class="form-group">
+                        <label for="Email">Ваш E-mail</label>
+                        <input type="email" class="form-control" id="Email" placeholder="Введите email">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="Check">
+                        <label class="form-check-label" for="Check">Согласен получать рассылку по почте о событиях сообщества</label>
+
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark float-right">Подтвердить</button>
+                </form>
+</div>
+    
    </main>
 </body>
 </html>
