@@ -15,6 +15,24 @@ body {
 .hero-cats {
     background: url(../img/main-cats.jpg) no-repeat;
     background-size: cover;
+    background-position: center center;
+}
+
+.hero-birds {
+    background: url(../img/main-birds.jpg) no-repeat;
+    background-size: cover;
+}
+
+.hero-dogs {
+    background: url(../img/main-dogs.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero-drawings {
+    background: url(../img/main-drawings.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .hero-text {
@@ -55,6 +73,20 @@ body {
 .card {
     display: flex !important;
     width: 25vw;
+}
+
+footer {
+    margin: 0;
+    height: 100px;
+    color: #ccc;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer a {
+    color: #ffc107;
 }
 
 @media screen and (max-width: 665px) {
