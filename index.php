@@ -34,11 +34,15 @@
                     </div>
                 </li>
                 <li class="nav-item active">
+                    <a class="nav-link" href="pages/news.php">Наш блог</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="pages/drawings.php">Конкурс рисунков</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Наши контакты</a>
+                    <a class="nav-link" href="pages/contacts.php">Наши контакты</a>
                 </li>
+                
             </ul>
         </div>
     </header>
@@ -62,6 +66,22 @@
     <h1>Кто такие волонтёры?</h1>
     <p>Волонтёры - обычные люди, которые в свободное время занимаются поиском и пристраиванием бездомных животных. За счёт средств сообщества животные получают необходимый уход и лекарства, и поступают на руки хозяевам в здоровом виде. Стать волонтёром может любой желающий, прошедший отбор. Основные требования: возраст не младше 25 лет, постоянное жилье и доход, доброе и отзывчивое сердце. Работа волонтёра добровольная, за нее не платят деньги, но без этих ребят тысячи животных просто не смогут спастись!</p>
     <img src="img/4.jpg" alt='хомяк на руках'>
+    <h1>Отзывы</h1>
+    <?php 
+     if( !isset($_GET['pg']) || $_GET['pg']<0 ) $_GET['pg']=0;
+    include 'moduls/feedback.php';
+    ?>
+    <form class="form-styles bg-success clearfix" name="form_add" method="post" action="moduls/add.php">
+<div class="form-group">
+<label for="name">Ваше имя</label>
+<input  class="form-control" type="text" name="name" id="name" placeholder="Имя">
+<label for="feedback">Ваш отзыв</label>
+<textarea  class="form-control" name="feedback" placeholder="Отзыв"></textarea>
+</div>
+
+<input type="submit" name="button" class="btn btn-outline-light float-right" value="Добавить отзыв">
+</form>
+   
     <a name="form"></a>
     <h2>Присоединиться к "Доброй лапе"</h2>
                 <form class="form-styles bg-warning clearfix">
@@ -86,5 +106,21 @@
             <li>Сайт: <a href="https://vk.com/kidmustrun">Ирина Громова</a></li>
         </ul>
     </footer>
+    <script>
+    function show_edit(id){
+        var feedback = document.getElementById(id);
+        var p = feedback.lastChild.innerHTML;
+        feedback.innerHTML='';
+        
+       var form = '<form class="form-styles clearfix" name="form_add" method="post" action="moduls/edit.php"><div class="form-group"><textarea  class="form-control" name="feedback" placeholder="Введите отзыв">'+p+'</textarea></div><input type="submit" name="button-edit" class="btn btn-outline-light float-right" value="Редактировать отзыв"> <input type="hidden" name="id" value="'+id+'"></form>';
+        feedback.innerHTML = form;
+    }
+    function show_delete(id){
+        var feedback = document.getElementById(id);
+        
+       var form = '<form class="clearfix" name="form_add" method="post" action="moduls/delete.php"><p>Вы действительно хотите удалить этот отзыв?</p><input type="button" name="button-close" class="btn btn-outline-light float-right" style="width:10vw;" value="Нет" onclick="location.reload()"><input type="submit" name="button-delete" style="width:10vw;" class="btn btn-danger float-right" value="Да"> <input type="hidden" name="id" value="'+id+'"></form>';
+        feedback.innerHTML = form;
+    }
+    </script>
 </body>
 </html>

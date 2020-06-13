@@ -13,7 +13,7 @@
 </head>
 <body>
 <header id="header" class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
-        <a class="navbar-brand" href="index.php"><img src="../img/logo.png" alt="logo" style="height: 60px;"></a>
+        <a class="navbar-brand" href="../index.php"><img src="../img/logo.png" alt="logo" style="height: 60px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,10 +34,13 @@
                     </div>
                 </li>
                 <li class="nav-item active">
+                    <a class="nav-link" href="news.php">Наш блог</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="drawings.php">Конкурс рисунков</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Наши контакты</a>
+                    <a class="nav-link" href="contacts.php">Наши контакты</a>
                 </li>
             </ul>
         </div>
@@ -48,7 +51,7 @@
             <h1>Наши птицы</h1>
         </div>
     </div>
-    <div class="container">
+    <div class="container flex">
         <?php 
         if( !isset($_GET['pg']) || $_GET['pg']<0 ) $_GET['pg']=0;
         $_GET['animal']='birds';
