@@ -13,7 +13,7 @@
 </head>
 <body>
 <header id="header" class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
-        <a class="navbar-brand" href="../index.php"><img src="../img/logo.png" alt="logo" style="height: 60px;"></a>
+        <a class="navbar-brand" href="../main.php"><img src="../img/logo.png" alt="logo" style="height: 60px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../index.php">Кто мы?</a>
+                    <a class="nav-link" href="../main.php">Кто мы?</a>
                 </li>
                 <li class="nav-item dropdown show active">
                     <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,10 +69,10 @@ $sql_res=mysqli_query($mysqli,
 WHERE id='.$_POST['id']); 
 if( mysqli_errno($mysqli) )
 echo ' <div class="hero hero-sad" id="hero">
-<div class="hero-text container"><h1>Отзыв не удалён</h1><h3>Произошла ошибка</h3><a class="btn btn-outline-light" href="../index.php" role="button">На главную</a>';
+<div class="hero-text container"><h1>Отзыв не удалён</h1><h3>Произошла ошибка</h3><a class="btn btn-outline-light" href="../main.php" role="button">На главную</a>';
 else // если все прошло нормально – выводим сообщение
 echo ' <div class="hero hero-success" id="hero">
-<div class="hero-text container"><h1>Отзыв удалён</h1><a class="btn btn-outline-light" href="../index.php" role="button">На главную</a>';
+<div class="hero-text container"><h1>Отзыв удалён</h1><a class="btn btn-outline-light" href="../main.php" role="button">На главную</a>';
 }// и выводим сообщение об изменении данных
 
 
