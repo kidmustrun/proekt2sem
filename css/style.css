@@ -298,3 +298,33 @@ a.page-link:hover {
     font-style: italic;
     font-size: 14px;
 }
+
+@media print {
+    img {
+        display: none;
+    }
+    .hero {
+        display: none;
+    }
+    .quote {
+        display: none;
+    }
+    .quote-footer {
+        display: none;
+    }
+    .feedback {
+        display: none;
+    }
+    ul.pagination {
+        display: none;
+    }
+    form {
+        display: none;
+    }
+    h2 {
+        display: none;
+    }
+    a[href^="http"]:not([href*="proekt2sem.std-933.ist.mospolytech.ru"]):after {
+        content: " (" attr(href) ")";
+    }
+}
